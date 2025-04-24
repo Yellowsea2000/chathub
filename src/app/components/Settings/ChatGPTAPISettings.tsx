@@ -26,7 +26,7 @@ const ChatGPTAPISettings: FC<Props> = ({ userConfig, updateConfigValue }) => {
         <Blockquote className="mt-1">{t('Your keys are stored locally')}</Blockquote>
       </div>
       <div className="flex flex-col gap-1">
-        <p className="font-medium text-sm">API Host</p>
+        <p className="font-medium text-sm">API Host </p>
         <Input
           placeholder="https://api.openai.com"
           value={userConfig.openaiApiHost}
@@ -35,10 +35,14 @@ const ChatGPTAPISettings: FC<Props> = ({ userConfig, updateConfigValue }) => {
       </div>
       <div className="flex flex-col gap-1">
         <p className="font-medium text-sm">API Model</p>
-        <Select
+        {/* <Select
           options={CHATGPT_API_MODELS.map((m) => ({ name: m, value: m }))}
           value={userConfig.chatgptApiModel}
           onChange={(v) => updateConfigValue({ chatgptApiModel: v })}
+        /> */}
+           <Input
+          value={userConfig.chatgptApiModel}
+          onChange={(e) => updateConfigValue({ chatgptApiModel: e.currentTarget.value })}
         />
       </div>
       <div className="flex flex-col gap-1">

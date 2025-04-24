@@ -58,7 +58,8 @@ export enum PerplexityMode {
 const userConfigWithDefaultValue = {
   openaiApiKey: '',
   openaiApiHost: 'https://api.openai.com',
-  chatgptApiModel: CHATGPT_API_MODELS[0] as (typeof CHATGPT_API_MODELS)[number],
+  // chatgptApiModel: CHATGPT_API_MODELS[0] as (typeof CHATGPT_API_MODELS)[number],
+  chatgptApiModel:'',
   chatgptApiTemperature: 1,
   chatgptApiSystemMessage: DEFAULT_CHATGPT_SYSTEM_MESSAGE,
   chatgptMode: ChatGPTMode.Webapp,
